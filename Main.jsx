@@ -4,12 +4,7 @@ import AiRecipe from "./components/AiRecipe";
 import { getHfRecipe } from "./api";
 
 export default function Main() {
-  const [ingredients, setIngredients] = React.useState([
-    "all the main spices",
-    "pasta",
-    "ground beef",
-    "tomato paste",
-  ]);
+  const [ingredients, setIngredients] = React.useState([]);
 
   const [recipe, setRecipe] = React.useState("");
 
