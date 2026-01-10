@@ -1,7 +1,7 @@
 import React from "react";
-import IngredientsList from "./components/IngredientsList";
-import AiRecipe from "./components/AiRecipe";
-import { getHfRecipe } from "./api";
+import IngredientsList from "./IngredientsList";
+import AiRecipe from "./AiRecipe";
+import { getHfRecipe } from "../api";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);

@@ -1,4 +1,4 @@
-import chefAiLogo from "./images/chef.ai-icon.png";
+import chefAiLogo from "../images/chef.ai-icon.png";
 
 export default function Header() {
   return (
