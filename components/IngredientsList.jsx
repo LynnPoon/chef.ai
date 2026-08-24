@@ -1,6 +1,20 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+
 export default function IngredientsList(props) {
-  const ingredientsListItems = props.ingredients.map((ingredient) => (
-    <li key={ingredient}>{ingredient}</li>
+  const ingredientsListItems = props.ingredients.map((ingredient, index) => (
+    // <li key={ingredient}>{ingredient}</li>
+    <li key={`${ingredient}-${index}`}>
+      <button
+        type="button"
+        className="ingredient-button"
+        onClick={() => props.removeIngredient(index)}
+        aria-label={`Remove ${ingredient}`}
+      >
+        <span className="ingredient-chip-label">{ingredient}</span>
+        <FontAwesomeIcon icon={faCircleXmark} aria-hidden="true" />
+      </button>
+    </li>
   ));
   return (
     <section>

@@ -28,6 +28,12 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
+  function removeIngredient(indexToRemove) {
+    setIngredients((prevIngredients) =>
+      prevIngredients.filter((ingredient, index) => index !== indexToRemove),
+    );
+  }
+
   return (
     <main>
       <form action={addIngredient} className="add-ingredient-form">
@@ -44,6 +50,7 @@ export default function Main() {
         <IngredientsList
           ref={recipeSection}
           ingredients={ingredients}
+          removeIngredient={removeIngredient}
           getRecipe={getRecipe}
         />
       )}

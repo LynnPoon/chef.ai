@@ -15,7 +15,8 @@ header {
   gap: 11px;
   height: 80px;
   background-color: white;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 }
 
@@ -66,12 +67,18 @@ main {
 }
 
 ul.ingredients-list {
-  margin-bottom: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 48px;
+  padding-left: 0;
+  list-style: none;
 }
 
 ul.ingredients-list > li {
   color: #475467;
   line-height: 28px;
+  margin: 0;
 }
 
 .get-recipe-container {
@@ -117,4 +124,34 @@ ul.ingredients-list > li {
 .suggested-recipe-container ul li,
 .suggested-recipe-container ol li {
   margin-bottom: 8px;
+}
+
+.ingredient-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 4px 6px 4px 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 999px;
+  background-color: #fafaf8;
+  color: #292929;
+  font:
+    500 0.875rem Inter,
+    sans-serif;
+  cursor: pointer;
+}
+
+.ingredient-button:hover {
+  background-color: #f1f1ed;
+  border-color: #b8b8b8;
+}
+
+.ingredient-button:focus-visible {
+  outline: 2px solid #d17557;
+  outline-offset: 2px;
+}
+
+.ingredient-chip-label {
+  white-space: nowrap;
 }
